@@ -7,7 +7,8 @@ function App() {
 
   const handleTranslate = async () => {
     setLoading(true);
-    const res = await fetch('/api/translate', {
+    const API_BASE_URL = process.env.REACT_APP_API_URL;
+    const res = await fetch(`${API_BASE_URL}/api/translate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text: english })
