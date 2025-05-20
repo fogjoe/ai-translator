@@ -2,9 +2,9 @@
   "name": "ai-translator",
   "private": true,
   "scripts": {
-    "client": "npm start --prefix client",
-    "server": "npm start --prefix server",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "client": "pnpm start --prefix client",
+    "server": "pnpm start --prefix server",
+    "dev": "concurrently \"pnpm --filter client dev\" \"pnpm --filter server dev\""
   },
   "devDependencies": {
     "concurrently": "^8.0.0"
